@@ -1,0 +1,11 @@
+Row-Level Security does not automatically cascade to your Vector DB indexes.
+
+In platforms like Snowflake, Cortex Search Services execute under Owner's Rights. This trust boundary mismatch allows low-privilege users to bypass access controls, semantically retrieving sensitive data from compiled indexes.
+
+There are two ways to resolve this: Pre-Filtering and Post-Filtering.
+
+Post-filtering retrieves the Top-K results and prunes them in middleware. The mathematical risk is K-nearest neighbor (KNN) dilution: if the Top-K elements are all restricted, the user receives zero results. Latency is also higher: T_post = T_search(N) + T_filter(K).
+
+Zero-Trust Pre-filtering intercepts queries, maps token claims, and injects metadata filters directly into the query execution. Data-leakage risk falls to R_pre = 0, and latency drops to T_pre = T_search(N_auth).
+
+Secure the cognitive data plane. Push security filters down to the search engine, preserve agentic determinism, and eliminate privilege escalation.

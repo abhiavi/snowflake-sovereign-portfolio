@@ -1,0 +1,9 @@
+If your RAG pipeline ingests raw PDFs without sliding-window redaction, you are already violating the DPDP Act.
+
+Under India's DPDP Act, transforming unstructured text containing PII (like Aadhaar, PAN, or phone numbers) into vector embeddings creates permanent compliance liabilities. Once vectorized, auditing or deleting individual records is mathematically impractical without rebuilding the index.
+
+Furthermore, running local Sovereign LLMs introduces strict VRAM and speed constraints, capping effective contexts to 6k tokens. Standard chunking splits sentences mid-thought, causing severe semantic loss.
+
+The architectural solution is windowed cosine similarity chunking. By calculating similarity drop-offs across sliding windows, we optimize document partitioning. Chunks are split dynamically to preserve conceptual coherence while staying under context budgets. The resulting blocks are sanitized at the ingest boundary before vectorization.
+
+Sovereign AI demands privacy by design, not by patch.

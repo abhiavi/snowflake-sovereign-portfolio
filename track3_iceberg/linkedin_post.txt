@@ -1,0 +1,9 @@
+Optimistic Concurrency Control (OCC) mathematically fails under high-velocity agentic workloads.
+
+When concurrent database clients attempt to update the metadata catalog in Apache Iceberg, uncoordinated transaction commit loops behave as coupled oscillators. Without temporal coordination, workers synchronize into a phase-locked state: the thundering herd. At high concurrency, collision rates hit 100%, causing commit throughput to collapse to zero while database systems waste storage bandwidth on redundant writes.
+
+Solving this bottleneck requires breaking temporal symmetry. By introducing randomized jitter into the exponential backoff model, client phase alignment is broken, distributing commits uniformly across the temporal dimension.
+
+For decoupled catalog-storage architectures, wrapping these updates in a 3-Phase Commit (3PC) protocol guarantees transaction atomicity. In the event of coordinator crash or network partition, the engine executes a deterministic rollback, cleaning up orphaned metadata, manifests, and data files. 
+
+Stop relying on basic retry loops. Build resilient architectures.
