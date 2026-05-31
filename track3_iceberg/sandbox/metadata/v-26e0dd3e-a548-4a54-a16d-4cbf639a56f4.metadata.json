@@ -1,0 +1,112 @@
+{
+  "format-version": 2,
+  "table-uuid": "f1a49dd0-6c12-4d86-a771-8246110bab5b",
+  "location": "/home/abhishek/ObsidianVault/03_Active_Projects/snowflake_sovereign_portfolio/track3_iceberg/sandbox",
+  "last-sequence-number": 4,
+  "last-updated-ms": 1780227258625,
+  "last-column-id": 3,
+  "current-schema-id": 0,
+  "schemas": [
+    {
+      "type": "struct",
+      "schema-id": 0,
+      "fields": [
+        {
+          "id": 1,
+          "name": "id",
+          "required": true,
+          "type": "int"
+        },
+        {
+          "id": 2,
+          "name": "timestamp",
+          "required": true,
+          "type": "double"
+        },
+        {
+          "id": 3,
+          "name": "payload",
+          "required": false,
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "default-spec-id": 0,
+  "partition-specs": [
+    {
+      "spec-id": 0,
+      "fields": []
+    }
+  ],
+  "last-partition-id": 999,
+  "default-sort-order-id": 0,
+  "sort-orders": [
+    {
+      "order-id": 0,
+      "fields": []
+    }
+  ],
+  "snapshots": [
+    {
+      "sequence-number": 1,
+      "snapshot-id": 4038820566370954168,
+      "timestamp-ms": 1780227258351,
+      "summary": {
+        "operation": "append",
+        "added-data-files": "1",
+        "added-records": "1"
+      },
+      "manifest-list": "/home/abhishek/ObsidianVault/03_Active_Projects/snowflake_sovereign_portfolio/track3_iceberg/sandbox/metadata/snap-4038820566370954168.json"
+    },
+    {
+      "sequence-number": 2,
+      "snapshot-id": 4525611490162540768,
+      "timestamp-ms": 1780227258418,
+      "summary": {
+        "operation": "append",
+        "added-data-files": "1",
+        "added-records": "3"
+      },
+      "manifest-list": "/home/abhishek/ObsidianVault/03_Active_Projects/snowflake_sovereign_portfolio/track3_iceberg/sandbox/metadata/snap-4525611490162540768.json"
+    },
+    {
+      "sequence-number": 3,
+      "snapshot-id": 4256887759414157494,
+      "timestamp-ms": 1780227258572,
+      "summary": {
+        "operation": "append",
+        "added-data-files": "1",
+        "added-records": "3"
+      },
+      "manifest-list": "/home/abhishek/ObsidianVault/03_Active_Projects/snowflake_sovereign_portfolio/track3_iceberg/sandbox/metadata/snap-4256887759414157494.json"
+    },
+    {
+      "sequence-number": 4,
+      "snapshot-id": 5044441227720779730,
+      "timestamp-ms": 1780227258625,
+      "summary": {
+        "operation": "append",
+        "added-data-files": "1",
+        "added-records": "3"
+      },
+      "manifest-list": "/home/abhishek/ObsidianVault/03_Active_Projects/snowflake_sovereign_portfolio/track3_iceberg/sandbox/metadata/snap-5044441227720779730.json"
+    }
+  ],
+  "current-snapshot-id": 5044441227720779730,
+  "snapshot-log": [
+    {
+      "snapshot-id": 4038820566370954168,
+      "timestamp-ms": 1780227258351
+    },
+    {
+      "snapshot-id": 4525611490162540768,
+      "timestamp-ms": 1780227258418
+    },
+    {
+      "snapshot-id": 4256887759414157494,
+      "timestamp-ms": 1780227258572
+    }
+  ],
+  "metadata-log": []
+}

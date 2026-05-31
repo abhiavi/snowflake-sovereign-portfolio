@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.hypothesis/
+architecture_diagram.png
+push_git.sh
+

@@ -1,0 +1,4 @@
+track1_mcp/.venv/
+track1_mcp/__pycache__/
+track1_mcp/.hypothesis/
+track1_mcp/architecture_diagram.png

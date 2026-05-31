@@ -1,0 +1,4 @@
+id,timestamp,payload
+40,1780227258.4156177,Record from concurrent writer #4 - seq 0
+41,1780227258.415618,Record from concurrent writer #4 - seq 1
+42,1780227258.4156187,Record from concurrent writer #4 - seq 2
